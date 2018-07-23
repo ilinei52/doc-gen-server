@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title  
+  form(action='../../template/upload' method='POST' enctype='multipart/form-data')
+    p
+      label(for="permanent") Permanent: 
+      input(type='text' name='permanent' value='false')
+    p
+      label(for="myFile") File: 
+      input(type='file' name='myFile' multiple='')
+    br
+    input(type='submit' value='Submit')
